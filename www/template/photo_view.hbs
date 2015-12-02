@@ -1,11 +1,30 @@
-<div class="container">
-  <div class="fly">
-    <img id="photo" src="/photo/{{id}}.jpg" class="img-responsive"/>
-  </div>
+<div class="view">
+    <img class="fit center" id="photo" src="/photo/{{id}}.jpg"/>
   <nav>
     <ul class="pager">
       {{#if next}}<li class="previous{{#unless next}} disabled{{/unless}}"><a href="#{{context_url}}{{next}}"><span aria-hidden="true">&larr;</span></a></li>{{/if}}
       {{#if prev}}<li class="next{{#unless prev}} disabled{{/unless}}"><a href="#{{context_url}}{{prev}}"><span aria-hidden="true">&rarr;</span></a></li>{{/if}}
     </ul>
   </nav>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" language="JavaScript">
+    function set_body_height() { // set body height = window height
+      $('img').height($(window).height());
+    }
+    $(document).ready(function() {
+      $(window).bind('resize', set_body_height);
+      set_body_height();
+    });
+  </script>
 </div>
+
+  <!--script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" language="JavaScript">
+    function set_body_height() { // set body height = window height
+      $('img').height($(window).height());
+    }
+    $(document).ready(function() {
+      $(window).bind('resize', set_body_height);
+      set_body_height();
+    });
+  </script-->

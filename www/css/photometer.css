@@ -32,6 +32,15 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
     background-color: #333;
 }
 
+.fit { /* set relative picture size */
+  max-width: 100%;
+  max-height: 100%;
+}
+.center {
+  display: block;
+  margin: auto;
+}
+
 /* TODO: Сделать это через кастомизацию bootstrap */
 .form-control {
     background-color: rgba(99, 99, 100, 0.7);
